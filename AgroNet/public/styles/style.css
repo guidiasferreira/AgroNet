@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-family: "Poppins";
+}
+
+:root {
+    --bgColor: rgb(45, 52, 63);
+}
+
+.container {
+    min-height: 100vh;
+    background-image: url(../img/wallpaper1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ffffff;
+    background-color: var(--bgColor);
+    color: white;
+    height: 10vh;
+    padding: 0 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6666664f;
+    color: white;
+    height: 80vh;
+    gap: 3vw;
+    overflow-y: auto;
+
+}
+
+main .infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 3vh;
+    column-gap: 3vw;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90vw;
+    padding: 4vh;
+    gap: 4vh;
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.213);
+    height: 270px;
+    width: 300px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    background-color: rgba(255, 255, 255, 0.088);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.72);
+    }
+}
+
+footer {
+    height: 10vh;
+    background-color: var(--bgColor);
+    display: flex;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#ip {
+    font-size: 1.2rem;
+}
+
+#temperatura, #umidade, #luminosidade {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        width: 80%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p, #temperatura, #umidade, #luminosidade {
+        font-size: 1rem;
+    }
+
+    #ip {
+        text-align: center;
+    }
+
+    header, footer {
+        height: 15vh;
+    }
+}
